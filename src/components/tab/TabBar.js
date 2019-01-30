@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 // styles
 import TabBarStyle from "/Users/halynabochnak/Desktop/ReactStart/simple-tabs/src/styled/tab/TabBarStyle";
 import TabItemStyle from "../../styled/tab/TabItemStyle";
 // constants
-import { ENUM, tabs } from "../../constants/constants";
+import { tabs } from "../../constants/constants";
 
 const TabBar = ({ handleClick, value }) => {
   return (
@@ -23,5 +24,9 @@ const TabBar = ({ handleClick, value }) => {
       </ul>
     </TabBarStyle>
   );
+};
+TabBar.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 };
 export default TabBar;

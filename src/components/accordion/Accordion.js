@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const Accordion = ({ text }) => {
   return (
     <div>
@@ -7,5 +7,7 @@ const Accordion = ({ text }) => {
     </div>
   );
 };
-
+Accordion.propTypes = {
+  text: PropTypes.string.isRequired
+};
 export default Accordion;

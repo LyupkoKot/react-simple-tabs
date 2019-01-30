@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // components
 import Accordion from "../accordion/Accordion";
 import Table from "../table/Table";
@@ -9,7 +10,6 @@ import TabViewStyle from "../../styled/tab/TabViewStyle";
 import { ENUM } from "../../constants/constants";
 
 const TabView = ({ value }) => {
-
   return (
     <TabViewStyle>
       {value === ENUM.FIRST && (
@@ -21,6 +21,10 @@ const TabView = ({ value }) => {
       )}
     </TabViewStyle>
   );
+};
+
+TabView.propTypes = {
+  value: PropTypes.string.isRequired
 };
 
 export default TabView;
