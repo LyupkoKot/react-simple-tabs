@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import TabBarStyle from "./styled/tab/TabBarStyle";
-import Wrapper from "/Users/halynabochnak/Desktop/ReactStart/simple-tabs/src/styled/app/AppStyled.js";
+// components
 import TabBar from "./components/tab/TabBar";
 import TabView from "./components/tab/TabView";
+// styles
+import Wrapper from "./styled/app/AppStyled.js";
 class App extends Component {
   state = {
     value: "FIRST"

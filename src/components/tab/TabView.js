@@ -1,17 +1,19 @@
 import React from "react";
+// components
 import Accordion from "../accordion/Accordion";
 import Table from "../table/Table";
 import Snackbars from "../snackbars/Snackbars";
-import { ENUM } from "../../constants/constants";
+// styles
 import TabViewStyle from "../../styled/tab/TabViewStyle";
+// constants
+import { ENUM } from "../../constants/constants";
 
 const TabView = ({ value }) => {
-  console.log(value);
 
   return (
     <TabViewStyle>
       {value === ENUM.FIRST && (
-        <Accordion text={"В п'ятницу п'того Ваня вышел с дома"} />
+        <Accordion text={"В п'ятницу п'ятого Ваня вышел с дома"} />
       )}
       {value === ENUM.SECOND && <Table text={"Welcome to the jungle"} />}
       {value === ENUM.THIRD && (
