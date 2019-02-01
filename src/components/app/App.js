@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
-import PropTypes from "prop-types";
+import "../../App.css";
 // components
-import TabBar from "./components/tab/TabBar";
-import TabView from "./components/tab/TabView";
+import TabBar from "../../container/tab/TabBar";
+import TabView from "../../container/tab/TabView";
 // styles
-import Wrapper from "./styled/app/AppStyled.js";
-import { ENUM } from "./constants/constants";
+import Wrapper from "../../styled/app/AppStyled.js";
+// constants
+import { ENUM } from "../../constants/constants";
+
 class App extends Component {
   state = {
     value: ENUM.FIRST

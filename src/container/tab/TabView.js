@@ -15,7 +15,7 @@ const TabView = ({ value }) => {
       {value === ENUM.FIRST && (
         <Accordion text={"В п'ятницу п'ятого Ваня вышел с дома"} />
       )}
-      {value === ENUM.SECOND && <Table text={"Welcome to the jungle"} />}
+      {value === ENUM.SECOND && <Table />}
       {value === ENUM.THIRD && (
         <Snackbars text={"Мне не жаль тебя, не жаль эту зиму"} />
       )}
