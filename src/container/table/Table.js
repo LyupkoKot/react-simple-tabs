@@ -1,18 +1,25 @@
 import React from "react";
-// components
-import TableHeader from "./TableHeader";
 // style
 import TableStyle from "../../styled/table/TableStyle";
-import TableContent from "./TableContent";
-const Table = () => {
+import TableContentStyle from "../../styled/table/TableContentStyle";
+import TableHeaderStyle from "../../styled/table/TableHeaderStyle";
 
+const Table = ({ tableContent, tableTitles }) => {
+  const titles = tableTitles.map(function(item, index) {
+    return <TableHeaderStyle key={index}>{item}</TableHeaderStyle>;
+  });
+
+  const content = tableContent.map(function(item) {
+    return Object.keys(item).map(function(key) {
+      return <TableContentStyle key={key}>{item[key]}</TableContentStyle>;
+    });
+  });
   return (
-    <TableStyle>
-      {/*<TableHeader/>*/}
-      <TableContent/>
+    <TableStyle tableContent={tableContent} tableTitles={tableTitles}>
+      {titles}
+      {content}
     </TableStyle>
   );
 };
-
 
 export default Table;

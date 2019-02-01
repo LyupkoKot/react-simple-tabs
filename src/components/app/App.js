@@ -7,6 +7,7 @@ import TabView from "../../container/tab/TabView";
 import Wrapper from "../../styled/app/AppStyled.js";
 // constants
 import { ENUM } from "../../constants/constants";
+import { tableContent, tableTitles } from "../../constants/constants";
 
 class App extends Component {
   state = {
@@ -20,7 +21,11 @@ class App extends Component {
     return (
       <Wrapper>
         <TabBar handleClick={this.handleClick} value={this.state.value} />
-        <TabView value={this.state.value} />
+        <TabView
+          value={this.state.value}
+          tableContent={tableContent}
+          tableTitles={tableTitles}
+        />
       </Wrapper>
     );
   }

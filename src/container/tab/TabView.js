@@ -9,13 +9,15 @@ import TabViewStyle from "../../styled/tab/TabViewStyle";
 // constants
 import { ENUM } from "../../constants/constants";
 
-const TabView = ({ value }) => {
+const TabView = ({ value, tableContent, tableTitles }) => {
   return (
     <TabViewStyle>
       {value === ENUM.FIRST && (
         <Accordion text={"В п'ятницу п'ятого Ваня вышел с дома"} />
       )}
-      {value === ENUM.SECOND && <Table />}
+      {value === ENUM.SECOND && (
+        <Table tableContent={tableContent} tableTitles={tableTitles} />
+      )}
       {value === ENUM.THIRD && (
         <Snackbars text={"Мне не жаль тебя, не жаль эту зиму"} />
       )}
@@ -24,7 +26,10 @@ const TabView = ({ value }) => {
 };
 
 TabView.propTypes = {
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  tableContent: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    .isRequired,
+  tableTitles: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default TabView;

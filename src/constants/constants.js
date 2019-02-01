@@ -21,25 +21,46 @@ export const tabs = [
   }
 ];
 
-export const table = [
+export const tableTitles = [
+  "Dessert (100g serving)",
+  "Calories",
+  "Fat",
+  "Carlos(g)",
+  "Protein"
+];
+
+export const tableContent = [
   {
-    title: "Dessert (100g serving)",
-    data: ["Frozen yoghurt", "159", "6", "32", "4"]
-  },
-  {
-    title: "Calories",
-    data: ["Ice cream sandwich", "237", "9", "31", "4.3"]
-  },
-  {
-    title: "Fat",
-    data: ["Eclair", "262", "16", "16", "6"]
-  },
-  {
-    title: "Carlos(g)",
-    data: ["Cupcake", "305", "23", "13", "4.3"]
-  },
-  {
-    title: "Protein",
-    data: ["Gingerbread", "356", "6", "22", "9"]
+    dessert: "Frozen yoghurt",
+    Calories: "159",
+    fat: "6",
+    carbs: "32",
+    protein: "4"
+  },{
+    dessert: "Ice cream sandwich",
+    Calories: "237",
+    fat: "9",
+    carbs: "31",
+    protein: "4.3"
+  },{
+    dessert:  "Eclair",
+    Calories: "262",
+    fat: "16",
+    carbs: "16",
+    protein: "6"
+  },{
+    dessert: "Cupcake",
+    Calories: "305",
+    fat: "23",
+    carbs: "13",
+    protein: "4.3"
+  },{
+    dessert: "Gingerbread",
+    Calories: "356",
+    fat: "3.7",
+    carbs: "22",
+    protein: "9"
   }
 ];
+
+
