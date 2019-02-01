@@ -5,7 +5,7 @@ import TabBar from "../../container/tab/TabBar";
 import TabView from "../../container/tab/TabView";
 // styles
 import Wrapper from "../../styled/app/AppStyled.js";
-// constants
+
 import { ENUM } from "../../constants/constants";
 import { tableContent, tableTitles } from "../../constants/constants";
 
