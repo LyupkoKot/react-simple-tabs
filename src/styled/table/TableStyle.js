@@ -24,5 +24,15 @@ const TableStyle = styled.ul`
   li:nth-child(${props => props.tableContent.length}n+1) {
     text-align: left;
   }
+  @media screen and (max-width: 730px) {
+    li {
+      padding: 15px 15px 15px 15px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    li {
+      padding: 15px 5px 15px 5px;
+    }
+  }
 `;
 export default TableStyle;
