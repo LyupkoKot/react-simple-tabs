@@ -1,13 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
-const Accordion = ({ text }) => {
-  return (
-    <div>
-      <p>{text}</p>
-    </div>
-  );
-};
-Accordion.propTypes = {
-  text: PropTypes.string.isRequired
+// component
+import AccordionComponent from "../../components/accordion/AccordionComponent";
+
+const Accordion = ({ accordionContent }) => {
+  return accordionContent.map(function(item, index) {
+    return (
+      <AccordionComponent
+        key={index}
+        title={item.title}
+        content={item.content}
+      />
+    );
+  });
 };
 export default Accordion;

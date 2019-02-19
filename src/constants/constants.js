@@ -36,25 +36,29 @@ export const tableContent = [
     fat: "6",
     carbs: "32",
     protein: "4"
-  },{
+  },
+  {
     dessert: "Ice cream sandwich",
     Calories: "237",
     fat: "9",
     carbs: "31",
     protein: "4.3"
-  },{
-    dessert:  "Eclair",
+  },
+  {
+    dessert: "Eclair",
     Calories: "262",
     fat: "16",
     carbs: "16",
     protein: "6"
-  },{
+  },
+  {
     dessert: "Cupcake",
     Calories: "305",
     fat: "23",
     carbs: "13",
     protein: "4.3"
-  },{
+  },
+  {
     dessert: "Gingerbread",
     Calories: "356",
     fat: "3.7",
@@ -63,4 +67,13 @@ export const tableContent = [
   }
 ];
 
-
+export const accordion = [
+  {
+    title: "Esquire",
+    content: "American Boy"
+  },
+  {
+    title: "Esquire",
+    content: "Борис Платон"
+  }
+];

@@ -1,34 +1,41 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../../App.css";
 // components
+import TabComponent from "../tab/TabComponent";
+// containers
 import TabBar from "../../container/tab/TabBar";
 import TabView from "../../container/tab/TabView";
 // styles
 import Wrapper from "../../styled/app/AppStyled.js";
 // constants
-import { ENUM } from "../../constants/constants";
-import { tableContent, tableTitles } from "../../constants/constants";
+import {
+  accordion,
+  ENUM,
+  tableContent,
+  tableTitles
+} from "../../constants/constants";
 
-class App extends Component {
-  state = {
-    value: ENUM.FIRST
-  };
-  handleClick = val => {
-    this.setState({ value: val });
+const App = () => {
+  const [value, setValue] = useState(ENUM.FIRST);
+  const handleClick = val => {
+    setValue(val);
   };
 
-  render() {
-    return (
-      <Wrapper>
-        <TabBar handleClick={this.handleClick} value={this.state.value} />
-        <TabView
-          value={this.state.value}
-          tableContent={tableContent}
-          tableTitles={tableTitles}
-        />
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper>
+      <TabComponent
+        tabBar={<TabBar value={value} handleClick={handleClick} />}
+        tabView={
+          <TabView
+            value={value}
+            tableContent={tableContent}
+            tableTitles={tableTitles}
+            accordionContent={accordion}
+          />
+        }
+      />
+    </Wrapper>
+  );
+};
 
 export default App;
