@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 // styles
-import TabBarStyle from "/Users/halynabochnak/Desktop/ReactStart/simple-tabs/src/styled/tab/TabBarStyle";
-import TabItemStyle from "../../styled/tab/TabItemStyle";
+import TabBarStyle from "styled/tab/TabBarStyle";
+import TabItemStyle from "styled/tab/TabItemStyle";
 // constants
-import { tabs } from "../../constants/constants";
+import { tabs } from "constants/constants";
 
 const TabBar = ({ handleClick, value }) => {
   return (
     <TabBarStyle>
       <ul>
-        {tabs.map(function(item, index) {
+        {tabs.map(function(item) {
           return (
             <TabItemStyle
-              key={index}
+              key={item.value}
               onClick={() => handleClick(item.value)}
               isActive={item.value === value}
             >

@@ -9,7 +9,6 @@ const TabItemStyle = styled.li`
   cursor: pointer;
   transition: 0.3s;
   color: ${({ isActive }) => (isActive ? `white` : "#C6E284")};
-  font: 16px "Droid Sans Mono";
 `;
 
 export default TabItemStyle;

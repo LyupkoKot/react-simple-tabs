@@ -1,11 +1,11 @@
 import React from "react";
-// component
-import AccordionComponent from "../../components/accordion/AccordionComponent";
+// containers
+import AccordionContainer from "component/accordion/AccordionComponent";
 
 const Accordion = ({ accordionContent }) => {
   return accordionContent.map(function(item, index) {
     return (
-      <AccordionComponent
+      <AccordionContainer
         key={index}
         title={item.title}
         content={item.content}

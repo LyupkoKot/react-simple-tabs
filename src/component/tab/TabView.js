@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 // components
-import Accordion from "../accordion/Accordion";
-import Table from "../table/Table";
-import Snackbars from "../snackbars/Snackbars";
+import Accordion from "component/accordion/Accordion";
+import Table from "component/table/Table";
+import Snackbars from "component/snackbars/Snackbars";
 // styles
-import TabViewStyle from "../../styled/tab/TabViewStyle";
+import TabViewStyle from "styled/tab/TabViewStyle";
 // constants
-import { ENUM } from "../../constants/constants";
+import { ENUM } from "constants/constants";
 
 const TabView = ({ value, tableContent, tableTitles, accordionContent }) => {
   return (
